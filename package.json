@@ -1,0 +1,16 @@
+{
+  "author": "Yuki Akiyama <you2197901 [at] gmail.com>",
+  "name": "",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "kraken-api" : "",
+    "allcoin" : "",
+    "bluebird" : "",
+    "node-trade-util" : "git://github.com/you21979/node-trade-util.git"
+  },
+  "readmeFilename": "README.md",
+  "description": "etwings trade api for promise",
+  "main": "index.js",
+  "devDependencies": {}
+}
