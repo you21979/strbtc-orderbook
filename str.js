@@ -7,7 +7,7 @@ var Promise = require('bluebird');
 var list = [];
 
 var bookformat = function(book){
-    return book.normalize(7).limit(5)
+    return book.normalize(7).limit(1)
 }
 
 list.push(allcoin.str().then(bookformat))
