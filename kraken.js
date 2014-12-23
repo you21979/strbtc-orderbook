@@ -30,4 +30,9 @@ var xrp = exports.xrp = function(){
     })
 }
 
+var btc = exports.btc = function(){
+    return get('XBT_JPY').then(function(book){
+        return book
+    })
+}
 

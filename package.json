@@ -8,6 +8,8 @@
     "allcoin" : "",
     "anx" : "",
     "poloniex.js" : "",
+    "etwings" : "",
+    "btcbox" : "",
     "bluebird" : "",
     "node-trade-util" : "git://github.com/you21979/node-trade-util.git"
   },
