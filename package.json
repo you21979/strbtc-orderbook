@@ -7,6 +7,7 @@
     "kraken-api" : "",
     "allcoin" : "",
     "anx" : "",
+    "poloniex.js" : "",
     "bluebird" : "",
     "node-trade-util" : "git://github.com/you21979/node-trade-util.git"
   },

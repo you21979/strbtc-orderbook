@@ -1,5 +1,6 @@
 var allcoin = require('./allcoin');
 var justcoin = require('./justcoin');
+var poloniex = require('./poloniex');
 var kraken = require('./kraken');
 var Promise = require('bluebird');
 
@@ -11,6 +12,7 @@ var bookformat = function(book){
 
 list.push(allcoin.str().then(bookformat))
 list.push(kraken.str().then(bookformat))
+list.push(poloniex.str().then(bookformat))
 list.push(justcoin.str().then(bookformat))
 
 Promise.all(list).then(function(books){
