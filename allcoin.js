@@ -20,6 +20,6 @@ var str = exports.str = function(){
     return get('STR_BTC')
 }
 var xrp = exports.xrp = function(){
-    return get('STR_BTC')
+    return get('XRP_BTC')
 }
 

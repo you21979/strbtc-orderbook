@@ -25,7 +25,7 @@ var str = exports.str = function(){
     })
 }
 var xrp = exports.xrp = function(){
-    return get('XBT_STR').then(function(book){
+    return get('XBT_XRP').then(function(book){
         return book.reverse()
     })
 }
