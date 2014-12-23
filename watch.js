@@ -33,7 +33,7 @@ var watch = function(list){
 }
 
 var f = [
-    function str(list){
+    function btc(list){
         list.push(btcbox.btc().then(bookformat))
         list.push(etwings.btc().then(bookformat))
         list.push(kraken.btc().then(bookformat))
