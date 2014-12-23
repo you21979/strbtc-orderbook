@@ -1,16 +1,17 @@
 var allcoin = require('./allcoin');
-var allcoin = require('./allcoin');
+var justcoin = require('./justcoin');
 var kraken = require('./kraken');
 var Promise = require('bluebird');
 
 var list = [];
 
-list.push(allcoin.str().then(function(book){
-    return book.normalize(8).limit(10)
-}))
-list.push(kraken.str().then(function(book){
-    return book.normalize(8).limit(10)
-}))
+var bookformat = function(book){
+    return book.normalize(8).limit(5)
+}
+
+list.push(allcoin.str().then(bookformat))
+list.push(kraken.str().then(bookformat))
+list.push(justcoin.str().then(bookformat))
 
 Promise.all(list).then(function(books){
     books.forEach(function(book){

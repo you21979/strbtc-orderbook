@@ -9,7 +9,7 @@ var get = function(pair){
             if(err) {
                 return reject(err);
             }
-            var ob = new OrderBook(pair);
+            var ob = new OrderBook('kraken', pair);
             Object.keys(data.result).forEach(function(k){
                 data.result[k].asks.forEach(function(v){ ob.addAskPriceAmount( parseFloat(v[0]), parseFloat(v[1]) ) })
                 data.result[k].bids.forEach(function(v){ ob.addBidPriceAmount( parseFloat(v[0]), parseFloat(v[1]) ) })

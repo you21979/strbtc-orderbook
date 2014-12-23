@@ -5,7 +5,7 @@ var api = allcoin.PublicApi;
 
 var get = function(pair){
     return api.depth(pair).then(function(res){
-        var ob = new OrderBook(pair);
+        var ob = new OrderBook('allcoin', pair);
         Object.keys(res.sell).forEach(function(k){
             ob.addAskPriceAmount( parseFloat(k), parseFloat(res.sell[k]) )
         })
