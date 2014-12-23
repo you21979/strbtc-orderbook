@@ -3,7 +3,7 @@ var Promise = require('bluebird');
 var OrderBook = require('trade-util').OrderBook;
 
 var get = function(pair){
-    var anx = new ANXClient('', '', pair, 'https://justcoin.com');
+    var anx = new ANXClient('', '', pair.split('_').join(''), 'https://justcoin.com');
     return new Promise(function(resolve, reject) {
         anx.fullDepth(function(err, res){
             if(err) {
@@ -22,9 +22,9 @@ var get = function(pair){
 }
 
 var str = exports.str = function(){
-    return get('STRBTC')
+    return get('STR_BTC')
 }
 var xrp = exports.xrp = function(){
-    return get('XRPBTC')
+    return get('XRP_BTC')
 }
 
