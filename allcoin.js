@@ -23,3 +23,19 @@ var xrp = exports.xrp = function(){
     return get('XRP_BTC')
 }
 
+var private = exports.private = function(pair, api_key, secret_key){
+    var w = pair.split('_');
+    var api = allcoin.createPrivateApi(api_key, secret_key, '');
+    return {
+        buy : function(price, amount){
+            return api.buyCoin(w[1], amount, price, w[0]).then(function(res){
+                return api.cancelOrder(res.order_id);
+            })
+        },
+        sell : function(price, amount){
+            return api.sellCoin(w[1], amount, price, w[0]).then(function(res){
+                return api.cancelOrder(res.order_id);
+            })
+        }
+    }
+}
